@@ -6,7 +6,9 @@ export const loginAction = async (userData, setUserData, navigate) => {
         const data = await loginUser(userData);
         const { success, message } = data;
         if (success) {
-            toast.success(message, { position: 'bottom-left' });
+            console.log('Before toast');
+
+            toast.success("toast", { position: 'bottom-left' });
             
                 console.log('Before navigation');
         navigate('/home');
