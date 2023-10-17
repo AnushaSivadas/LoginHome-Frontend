@@ -8,13 +8,8 @@ export const loginAction = async (userData, setUserData, navigate) => {
         if (success) {
             toast.success(message, { position: 'bottom-left' });
             setTimeout(() => {
-                try {
-                    navigate('/home');
-                    console.log('After navigation');
-                } catch (error) {
-                    console.error('Error after navigation:', error);
-                }
-            }, 1000);
+                navigate('/home');
+            }, 5000);
             setUserData({
                 email: "",
                 password: "",
