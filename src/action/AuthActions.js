@@ -8,7 +8,9 @@ export const loginAction = async (userData, setUserData, navigate) => {
         if (success) {
             toast.success(message, { position: 'bottom-left' });
             setTimeout(() => {
-                navigate('../home',{ replace: true });
+                console.log('Before navigation');
+        navigate('/home');
+        console.log('After navigation');
             }, 1000);
             setUserData({
                 email: "",
@@ -49,7 +51,9 @@ export const googleSigninAction = async (credential, navigate) => {
         if (success) {
             toast.success(message,{position: 'bottom-left'});
             setTimeout(() => {
-                navigate("/home");
+                console.log('Before navigation');
+        navigate('/home');
+        console.log('After navigation');
             }, 1000);
         } else {
             toast.error(message, { position: 'bottom-left' });
