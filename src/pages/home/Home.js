@@ -11,6 +11,7 @@ const Home = () => {
   const [username, setUsername] = useState('');
 
   useEffect(() => {
+    console.log("home rendered");
     const verifyUser = async () => {
       if (!cookies.token) {
         navigate('/');
