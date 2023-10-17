@@ -15,7 +15,6 @@ export const loginAction = async (userData, setUserData, navigate) => {
                 password: "",
             });
         } else {
-            console.log("email")
             toast.error(message, { position: 'bottom-left' });
         }
     } catch (error) {

@@ -15,7 +15,7 @@ const EmailVerify = () => {
     useEffect(() => {
       const verifyEmailUrl = async () => {
         try {
-          const url = `${BASE_URL}${param.id}/verify/${param.token}`;
+          const url = `${BASE_URL}/${param.id}/verify/${param.token}`;
           const { data } = await axios.get(url);
         const { success, message } = data;
 
