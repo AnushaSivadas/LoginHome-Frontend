@@ -4,6 +4,7 @@ import Dashboard from './pages/dashboard/Dashboard';
 import Home from './pages/home/Home';
 import Login from './pages/login/Login';
 import EmailVerify from './components/EmailVerify';
+import NotFound from './pages/notfound/notfound';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           path="/:id/verify/:token"
           element={<EmailVerify/>}
         />
+        <Route component={NotFound} />
       </Routes>
     </div>
   );
