@@ -14,6 +14,8 @@ const Home = () => {
     console.log("home rendered");
     const verifyUser = async () => {
       if (!cookies.token) {
+    console.log("no cookies token");
+      
         navigate('/');
         return;
       }
@@ -24,6 +26,8 @@ const Home = () => {
   }, [cookies, navigate, removeCookie]);
 
   const Logout = () => {
+    console.log("logout");
+
     removeCookie('token');
     navigate('/');
   };
