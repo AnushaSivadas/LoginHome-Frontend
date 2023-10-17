@@ -1,0 +1,106 @@
+.login-box {
+    position: relative;
+    width: 32em;
+    height: 35em;
+    color: white;
+    background: #2c6c8f;
+    border-radius: 50px;
+    border: 18px solid #1f5474;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h2{
+    margin-top:10px;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 8px 40px 8px;
+    margin-left: 30px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+}
+
+input:focus {
+    outline-color: rgb(28, 121, 121);
+}
+
+.input-box {
+    margin: 10px;
+    font-size: 9pt;
+    font-weight: 600;
+}
+
+
+.forgot {
+    display: flex;
+    align-self: flex-end;
+    margin-right: 90px;
+    font-style: italic;
+    font-size: 12px;
+}
+
+.swap{
+    margin: 4px 0px 10px 170px;
+    font-size: .7em;
+}
+
+.swap span{
+    font-weight: 600;
+    cursor: pointer;
+}
+.login-box button {
+    position: relative;
+    display: flex;
+    padding: 10px 60px;
+    margin: 20px 0px 0px 170px;
+    /* margin: 25px 0px; */
+    background: white;
+    border-radius: 20px; 
+    cursor: pointer;
+    color: black;
+    font-weight: 600;
+    font-size: 13px;
+    border: none;
+  }
+  .login-box button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 15px; 
+    padding: 3px; 
+    background:linear-gradient(45deg,orangered,rgba(5, 141, 156, 0.782)); 
+    -webkit-mask: 
+       linear-gradient(#fff 0 0) content-box, 
+       linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude; 
+  }
+
+.login-title{
+    margin-bottom: 10px;
+    font-size: 50px;
+}
+.google{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.or{
+    font-size: .7em;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+    .login-box {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+}
+ 

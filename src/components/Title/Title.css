@@ -1,0 +1,17 @@
+
+.name{
+ font-size: .9em;
+}
+
+.name span:first-child {
+    background: linear-gradient(to top, #de4f28,#f9a225);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 700;
+
+}
+
+.name span:last-child {
+    color: rgb(18, 170, 252);
+}
+
