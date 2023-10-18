@@ -37,6 +37,7 @@ export const registerUser = async (userData) => {
 
   export const verifyUserSession = async () => {
     try {
+      console.log("verifyUserSession")
       const response = await axios.post(`${BASE_URL}`, {}, {
         withCredentials: true,
       });
