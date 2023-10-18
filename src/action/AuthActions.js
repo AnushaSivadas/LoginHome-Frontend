@@ -4,9 +4,11 @@ import { loginUser, registerUser, googleSigninUser,verifyUserSession } from '../
 export const loginAction = async (userData, setUserData, navigate) => {
     try {
         const data = await loginUser(userData);
-        const { success, message } = data;
+        const { success, message ,token} = data;
         if (success) {
             toast.success(message, { position: 'bottom-left' });
+
+            localStorage.setItem("profile", JSON.stringify({token}));
             setTimeout(() => {
                 navigate('/home');
             }, 1000);
@@ -45,9 +47,10 @@ export const registerAction = async (userData, setUserData) => {
 export const googleSigninAction = async (credential, navigate) => {
     try {
         const data = await googleSigninUser(credential);
-        const { success, message } = data;
+        const { success, message,token } = data;
         if (success) {
             toast.success(message,{position: 'bottom-left'});
+            localStorage.setItem("profile", JSON.stringify({token}));
             setTimeout(() => {
                 navigate("/home");
             }, 1000);
@@ -59,7 +62,7 @@ export const googleSigninAction = async (credential, navigate) => {
     }
 };
 
-export const checkUserSession = async (navigate, setUsername, removeCookie) => {
+export const  checkUserSession = async (navigate, setUsername, removeCookie) => {
     try {
       const data = await verifyUserSession();
       const { status, user } = data;
@@ -67,7 +70,7 @@ export const checkUserSession = async (navigate, setUsername, removeCookie) => {
         setUsername(user);
         toast(`Hello ${user}`, { position: 'top-right' });
       } else {
-        removeCookie('token');
+        localStorage.removeItem('profile');
         navigate('/');
       }
     } catch (error) {

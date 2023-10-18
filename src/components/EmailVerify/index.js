@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import axios from "axios";
 import { toast,ToastContainer } from "react-toastify";
 import success from "../../images/success.png";
 import styles from "./styles.module.css";
-import { BASE_URL } from "../../api/AuthRequests";
+import API from '../../utils/axios.js';
+
 
 const EmailVerify = () => {
     const [validUrl, setValidUrl] = useState(true);
@@ -15,8 +15,8 @@ const EmailVerify = () => {
     useEffect(() => {
       const verifyEmailUrl = async () => {
         try {
-          const url = `${BASE_URL}/${param.id}/verify/${param.token}`;
-          const { data } = await axios.get(url);
+          // const url = `${BASE_URL}/${param.id}/verify/${param.token}`;
+          const { data } = await API.get(`/${param.id}/verify/${param.token}`);
         const { success, message } = data;
 
           if (success) {
