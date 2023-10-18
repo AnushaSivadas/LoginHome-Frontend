@@ -1,6 +1,4 @@
 import API from '../utils/axios.js';
-// export const BASE_URL= 'http://localhost:4000'
-// export const BASE_URL= 'https://loginhomebackend.onrender.com'
 
 export const loginUser = async (userData) => {
   try {
