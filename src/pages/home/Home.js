@@ -13,6 +13,7 @@ const Home = () => {
   useEffect(() => {
     console.log("home rendered");
     const verifyUser = async () => {
+      console.log("cookies",cookies)
       if (!cookies.token) {
     console.log("no cookies token");
       
