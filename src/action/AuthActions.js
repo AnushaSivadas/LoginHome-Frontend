@@ -62,7 +62,7 @@ export const googleSigninAction = async (credential, navigate) => {
     }
 };
 
-export const  checkUserSession = async (navigate, setUsername, removeCookie) => {
+export const  checkUserSession = async (navigate, setUsername) => {
     try {
       const data = await verifyUserSession();
       const { status, user } = data;

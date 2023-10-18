@@ -107,7 +107,7 @@ const RegisterBox = ({ setLogin }) => {
                 </div>
                 <div className='input-box'>
                     <label htmlFor='confirmpassword'>Confirm Password:</label>
-                    <input style={{ marginRight: "40px" }}
+                    <input className='cpass'
                         type='password'
                         name='confirmpassword'
                         value={confirmpassword}

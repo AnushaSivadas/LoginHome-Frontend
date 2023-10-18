@@ -72,7 +72,6 @@ const LoginBox = ({ setLogin }) => {
                     />
                 </div>
 
-                {/* <div className='forgot'>Forgot User ID/PassCode</div> */}
 
                 <button type='submit' onClick={handleSubmit}>Login</button>
                 <div className='swap'>New User? <span onClick={loginRegisterHandle}><u>Register here</u></span></div>

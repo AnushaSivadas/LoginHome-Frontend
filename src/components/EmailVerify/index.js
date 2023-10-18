@@ -15,7 +15,6 @@ const EmailVerify = () => {
     useEffect(() => {
       const verifyEmailUrl = async () => {
         try {
-          // const url = `${BASE_URL}/${param.id}/verify/${param.token}`;
           const { data } = await API.get(`/${param.id}/verify/${param.token}`);
         const { success, message } = data;
 
